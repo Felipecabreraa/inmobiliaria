@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmobiliaria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="propiedades_venta.html">Propiedades en Venta</a>
+      <a href="propiedades_alquiler.html">Propiedades en Alquiler</a>
+    </nav>
+  </header>
+    
+  <!-- Agregar la imagen debajo del nav -->
+  <section id="imagen-inicio">
+    <div class="texto-encima">
+        <h2>
+            Encuentra tu nueva propiedad
+        </h2>
+    </div>
+    <img src="./img/propiedades/portada.avif" alt="Imagen de inicio" />
+  </section>
+
+  <main>
+    <section id="propiedades-venta">
+      <h2>Propiedades en Venta</h2>
+      <div id="lista-venta"></div>
+      <button id="ver-todas-venta">Ver todas las propiedades en venta</button>
+    </section>
+
+    <section id="propiedades-alquiler">
+      <h2>Propiedades en Alquiler</h2>
+      <div id="lista-alquiler"></div>
+      <button id="ver-todas-alquiler">Ver todas las propiedades en alquiler</button>
+    </section>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

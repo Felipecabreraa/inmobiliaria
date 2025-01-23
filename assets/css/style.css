@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: white;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Lista de propiedades (sección que contiene las propiedades) */
+#lista-venta, #lista-alquiler, #lista-venta-completa, #lista-alquiler-completa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye las tarjetas de manera eficiente */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo de las tarjetas de propiedades */
+.property-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%; /* Establece el ancho de las tarjetas a un 30% del contenedor */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+    flex-grow: 1; /* Hace que las tarjetas crezcan y ocupen el espacio disponible */
+}
+
+/* Imagen de la propiedad */
+.property-card img {
+    width: 100%;  /* Ajusta el ancho al 100% del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga su aspecto proporcional */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+/* Título de la tarjeta */
+.property-card h3 {
+    margin: 10px 0;
+}
+
+/* Descripción de la propiedad */
+.property-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Iconos */
+.icon {
+    margin-left: 5px;
+}
+
+/* Estilos para el contenedor de la imagen */
+#imagen-inicio {
+    position: relative; /* Necesario para posicionar el texto sobre la imagen */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    height: 50vh; /* La altura es el 50% de la altura de la ventana */
+    display: flex; /* Usamos flexbox para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Evita que la imagen se desborde del contenedor */
+}
+
+/* Estilos para la imagen */
+#imagen-inicio img {
+    width: 100%;  /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* La imagen cubre todo el espacio sin perder la proporción */
+    object-position: center; /* Centra la imagen */
+}
+
+/* Estilos para el texto que irá sobre la imagen */
+.texto-encima {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente el texto */
+    color: white !important; /* Color blanco para el texto con !important */
+    font-size: 2rem; /* Tamaño del texto (ajústalo a lo que necesites) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para que el texto se vea más claro sobre la imagen */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    padding: 10px; /* Un pequeño relleno alrededor del texto */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .property-card {
+        width: 45%; /* En pantallas pequeñas, las tarjetas ocupan el 45% del ancho */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .property-card {
+        width: 100%; /* En pantallas muy pequeñas, las tarjetas ocupan el 100% del ancho */
+    }
+}
